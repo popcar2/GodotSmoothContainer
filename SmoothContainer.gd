@@ -2,6 +2,8 @@ extends Control
 class_name SmoothContainer
 
 @export_enum("Horizontal", "Vertical") var direction: String = "Horizontal"
+## How often the update function runs, in seconds. Low values are performance intensive!
+@export var poll_rate: float = 0.15
 
 @export_group("Spacing")
 @export var horizontal_spacing: int = 10
@@ -13,8 +15,11 @@ class_name SmoothContainer
 @export var right_margin: int
 @export var down_margin: int
 
+## Global Tween so it doesn't create one each time the function runs
 var tween: Tween
+## Bool used to check if there's a cooldown or not
 var just_updated: bool
+## Global Vector2 to calculate the next position of each container child
 var next_position: Vector2
 
 func _gui_input(event):
@@ -82,11 +87,11 @@ func update_vertical_direction():
 		
 		next_position.y += child.size.y + vertical_spacing
 
-## Creates a polling rate of x seconds rather than using the function every single frame.
-## Plays the function again after polling rate ends to readjust positions.
+## Creates a cooldown of x seconds rather than using the function every single frame.
+## Plays the function again after poll rate ends to readjust positions.
 func cooldown_update():
 	just_updated = true
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(poll_rate).timeout
 	just_updated = false
 	update_positions(false)
 
