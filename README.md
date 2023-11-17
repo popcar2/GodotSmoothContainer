@@ -8,7 +8,7 @@ https://github.com/popcar2/GodotSmoothContainer/assets/16920817/cd93e8d2-cd3d-4a
 
 ## How to use
 
-1. Attach the script to a Control node, make sure to set the anchor properly.
+1. Attach `SmoothContainer.gd` to a Control node, make sure to set the anchor properly.
 2. Change the signal in the `_ready()` function to whenever you'd like to update the position of children, or call `update_positions()` yourself.
 3. Add a ScrollContainer as a parent if you need scroll bars to appear when nodes overflow out of bounds.
 4. Adjust the `poll rate` if needed, but beware that calling the function every 0.1 seconds or less can be very performance taxing.
