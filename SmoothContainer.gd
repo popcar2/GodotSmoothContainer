@@ -4,6 +4,8 @@ class_name SmoothContainer
 @export_enum("Horizontal", "Vertical") var direction: String = "Horizontal"
 ## How often the update function runs, in seconds. Low values are performance intensive!
 @export var poll_rate: float = 0.15
+## The speed of the Tween animation, in seconds.
+@export var animation_speed: float = 0.5
 
 @export_group("Spacing")
 @export var horizontal_spacing: int = 10
@@ -22,11 +24,8 @@ var just_updated: bool
 ## Global Vector2 to calculate the next position of each container child
 var next_position: Vector2
 
-func _gui_input(event):
-	if event is InputEventMouseButton and event.is_pressed():
-		update_positions()
-
 func _ready():
+	# Change this signal to whenever you'd like to update
 	get_window().size_changed.connect(update_positions)
 	update_positions(false)
 
@@ -59,7 +58,7 @@ func update_horizontal_direction():
 		if child.position != next_position:
 			if tween == null or !tween.is_running():
 				restore_tween()
-			tween.tween_property(child, "position", next_position, 0.5)
+			tween.tween_property(child, "position", next_position, animation_speed)
 		
 		if child.size.y > tallest_child:
 			tallest_child = child.size.y
@@ -80,7 +79,7 @@ func update_vertical_direction():
 		if child.position != next_position:
 			if tween == null or !tween.is_running():
 				restore_tween()
-			tween.tween_property(child, "position", next_position, 0.5)
+			tween.tween_property(child, "position", next_position, animation_speed)
 		
 		if child.size.x > longest_child:
 			longest_child = child.size.x

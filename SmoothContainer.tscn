@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuts6pclw8nci"]
+[gd_scene load_steps=4 format=3 uid="uid://cuts6pclw8nci"]
 
 [ext_resource type="Script" path="res://SmoothContainer.gd" id="1_4m6jo"]
+[ext_resource type="Script" path="res://ClickToRefresh.gd" id="2_dyupo"]
 [ext_resource type="Script" path="res://ClickToRemove.gd" id="2_eelfg"]
 
 [node name="Control" type="Control"]
@@ -17,6 +18,9 @@ left_margin = 10
 up_margin = 10
 right_margin = 10
 down_margin = 10
+
+[node name="ClickToRefresh" type="Node" parent="."]
+script = ExtResource("2_dyupo")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
