@@ -4,619 +4,622 @@
 [ext_resource type="Script" path="res://ClickToRefresh.gd" id="2_dyupo"]
 [ext_resource type="Script" path="res://ClickToRemove.gd" id="2_eelfg"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
+[node name="ScrollContainer" type="ScrollContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_4m6jo")
+direction = "Vertical"
 left_margin = 10
 up_margin = 10
 right_margin = 10
 down_margin = 10
 
-[node name="ClickToRefresh" type="Node" parent="."]
+[node name="ClickToRefresh" type="Node" parent="Control"]
 script = ExtResource("2_dyupo")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="Panel2" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel3" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 50.0
-offset_bottom = 20.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel4" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel5" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 50.0
-offset_bottom = 50.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel6" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel7" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel8" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel9" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 60.0
-offset_bottom = 60.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel10" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel11" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel12" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel13" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel14" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel15" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 80.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel16" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel17" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel18" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel19" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel20" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel21" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel22" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 100.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel23" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel24" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel25" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel26" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel27" type="Panel" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_eelfg")
-
-[node name="Panel28" type="Panel" parent="."]
+[node name="Panel3" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 50.0
 offset_bottom = 20.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel29" type="Panel" parent="."]
+[node name="Panel4" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel30" type="Panel" parent="."]
+[node name="Panel5" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 50.0
 offset_bottom = 50.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel31" type="Panel" parent="."]
+[node name="Panel6" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel32" type="Panel" parent="."]
+[node name="Panel7" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel33" type="Panel" parent="."]
+[node name="Panel8" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel34" type="Panel" parent="."]
+[node name="Panel9" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 60.0
 offset_bottom = 60.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel35" type="Panel" parent="."]
+[node name="Panel10" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel36" type="Panel" parent="."]
+[node name="Panel11" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel37" type="Panel" parent="."]
+[node name="Panel12" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel38" type="Panel" parent="."]
+[node name="Panel13" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel39" type="Panel" parent="."]
+[node name="Panel14" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel40" type="Panel" parent="."]
+[node name="Panel15" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 80.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel41" type="Panel" parent="."]
+[node name="Panel16" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel42" type="Panel" parent="."]
+[node name="Panel17" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel43" type="Panel" parent="."]
+[node name="Panel18" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel44" type="Panel" parent="."]
+[node name="Panel19" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel45" type="Panel" parent="."]
+[node name="Panel20" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel46" type="Panel" parent="."]
+[node name="Panel21" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel47" type="Panel" parent="."]
+[node name="Panel22" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 100.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel48" type="Panel" parent="."]
+[node name="Panel23" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel49" type="Panel" parent="."]
+[node name="Panel24" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel50" type="Panel" parent="."]
+[node name="Panel25" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel51" type="Panel" parent="."]
+[node name="Panel26" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel52" type="Panel" parent="."]
+[node name="Panel27" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel53" type="Panel" parent="."]
+[node name="Panel28" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 50.0
 offset_bottom = 20.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel54" type="Panel" parent="."]
+[node name="Panel29" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel55" type="Panel" parent="."]
+[node name="Panel30" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 50.0
 offset_bottom = 50.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel56" type="Panel" parent="."]
+[node name="Panel31" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel57" type="Panel" parent="."]
+[node name="Panel32" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel58" type="Panel" parent="."]
+[node name="Panel33" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel59" type="Panel" parent="."]
+[node name="Panel34" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 60.0
 offset_bottom = 60.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel60" type="Panel" parent="."]
+[node name="Panel35" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel61" type="Panel" parent="."]
+[node name="Panel36" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel62" type="Panel" parent="."]
+[node name="Panel37" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel63" type="Panel" parent="."]
+[node name="Panel38" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel64" type="Panel" parent="."]
+[node name="Panel39" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel65" type="Panel" parent="."]
+[node name="Panel40" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 80.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel66" type="Panel" parent="."]
+[node name="Panel41" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel67" type="Panel" parent="."]
+[node name="Panel42" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel68" type="Panel" parent="."]
+[node name="Panel43" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel69" type="Panel" parent="."]
+[node name="Panel44" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel70" type="Panel" parent="."]
+[node name="Panel45" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel71" type="Panel" parent="."]
+[node name="Panel46" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel72" type="Panel" parent="."]
+[node name="Panel47" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 100.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel73" type="Panel" parent="."]
+[node name="Panel48" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel74" type="Panel" parent="."]
+[node name="Panel49" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel75" type="Panel" parent="."]
+[node name="Panel50" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel76" type="Panel" parent="."]
+[node name="Panel51" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel77" type="Panel" parent="."]
+[node name="Panel52" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel78" type="Panel" parent="."]
+[node name="Panel53" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 50.0
 offset_bottom = 20.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel79" type="Panel" parent="."]
+[node name="Panel54" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel80" type="Panel" parent="."]
+[node name="Panel55" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 50.0
 offset_bottom = 50.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel81" type="Panel" parent="."]
+[node name="Panel56" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel82" type="Panel" parent="."]
+[node name="Panel57" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel83" type="Panel" parent="."]
+[node name="Panel58" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel84" type="Panel" parent="."]
+[node name="Panel59" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 60.0
 offset_bottom = 60.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel85" type="Panel" parent="."]
+[node name="Panel60" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel86" type="Panel" parent="."]
+[node name="Panel61" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel87" type="Panel" parent="."]
+[node name="Panel62" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel88" type="Panel" parent="."]
+[node name="Panel63" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel89" type="Panel" parent="."]
+[node name="Panel64" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel90" type="Panel" parent="."]
+[node name="Panel65" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 80.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel91" type="Panel" parent="."]
+[node name="Panel66" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel92" type="Panel" parent="."]
+[node name="Panel67" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel93" type="Panel" parent="."]
+[node name="Panel68" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel94" type="Panel" parent="."]
+[node name="Panel69" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel95" type="Panel" parent="."]
+[node name="Panel70" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel96" type="Panel" parent="."]
+[node name="Panel71" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel97" type="Panel" parent="."]
+[node name="Panel72" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 100.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel98" type="Panel" parent="."]
+[node name="Panel73" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel99" type="Panel" parent="."]
+[node name="Panel74" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_eelfg")
 
-[node name="Panel100" type="Panel" parent="."]
+[node name="Panel75" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel76" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel77" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel78" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 50.0
+offset_bottom = 20.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel79" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel80" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 50.0
+offset_bottom = 50.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel81" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel82" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel83" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel84" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 60.0
+offset_bottom = 60.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel85" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel86" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel87" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel88" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel89" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel90" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 80.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel91" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel92" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel93" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel94" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel95" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel96" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel97" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 100.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel98" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel99" type="Panel" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_eelfg")
+
+[node name="Panel100" type="Panel" parent="Control"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0

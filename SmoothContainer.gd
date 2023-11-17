@@ -24,9 +24,15 @@ var just_updated: bool
 ## Global Vector2 to calculate the next position of each container child
 var next_position: Vector2
 
+var start_min_size: Vector2
+
 func _ready():
+	# I don't know why but having a container parent forces this node's size to be (0, 0) in the first frame
+	await get_tree().physics_frame
+	
 	# Change this signal to whenever you'd like to update
 	get_window().size_changed.connect(update_positions)
+	start_min_size = custom_minimum_size
 	update_positions(false)
 
 func update_positions(update_again: bool = true):
@@ -64,6 +70,12 @@ func update_horizontal_direction():
 			tallest_child = child.size.y
 		
 		next_position.x += child.size.x + horizontal_spacing
+	
+	if get_parent() is ScrollContainer:
+		if next_position.y + tallest_child > get_parent().size.y:
+			custom_minimum_size.y = next_position.y + tallest_child + down_margin
+		else:
+			custom_minimum_size.y = start_min_size.y
 
 func update_vertical_direction():
 	var longest_child: int = 0
@@ -85,6 +97,12 @@ func update_vertical_direction():
 			longest_child = child.size.x
 		
 		next_position.y += child.size.y + vertical_spacing
+	
+	if get_parent() is ScrollContainer:
+		if next_position.x + longest_child > get_parent().size.x:
+			custom_minimum_size.x = next_position.x + longest_child + right_margin
+		else:
+			custom_minimum_size.x = start_min_size.x
 
 ## Creates a cooldown of x seconds rather than using the function every single frame.
 ## Plays the function again after poll rate ends to readjust positions.
